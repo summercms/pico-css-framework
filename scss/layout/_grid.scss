@@ -1,8 +1,10 @@
-@if ($enable-classes and $enable-grid) {
+@use "../config";
+
+@if (config.$enable-classes and config.$enable-grid) {
   /**
- * Grid
- * Minimal grid system with auto-layout columns
- */
+   * Grid
+   * Minimal grid system with auto-layout columns
+   */
 
   .grid {
     grid-column-gap: var(--grid-spacing-horizontal);
@@ -11,8 +13,8 @@
     grid-template-columns: 1fr;
     margin: 0;
 
-    @if map-get($breakpoints, "lg") {
-      @media (min-width: map-get($breakpoints, "lg")) {
+    @if map-get(config.$breakpoints, "lg") {
+      @media (min-width: map-get(config.$breakpoints, "lg")) {
         grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
       }
     }

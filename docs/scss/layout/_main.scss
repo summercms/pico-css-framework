@@ -1,3 +1,5 @@
+@use "../../../scss/config";
+
 /**
  * Docs: Main (Grid)
  */
@@ -9,8 +11,8 @@ $navHeight: 3.5rem;
 body > main {
   padding-top: calc(var(--block-spacing-vertical) + #{$navHeight});
 
-  @if map-get($breakpoints, "lg") {
-    @media (min-width: map-get($breakpoints, "lg")) {
+  @if map-get(config.$breakpoints, "lg") {
+    @media (min-width: map-get(config.$breakpoints, "lg")) {
       --block-spacing-horizontal: calc(var(--spacing) * 1.75);
       grid-column-gap: calc(var(--block-spacing-horizontal) * 3);
       display: grid;
@@ -18,8 +20,8 @@ body > main {
     }
   }
 
-  @if map-get($breakpoints, "xl") {
-    @media (min-width: map-get($breakpoints, "xl")) {
+  @if map-get(config.$breakpoints, "xl") {
+    @media (min-width: map-get(config.$breakpoints, "xl")) {
       --block-spacing-horizontal: calc(var(--spacing) * 2);
     }
   }

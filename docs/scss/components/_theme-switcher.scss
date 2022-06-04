@@ -1,3 +1,5 @@
+@use "../../../scss/config";
+
 /**
  * Docs: Theme switcher
  */
@@ -65,7 +67,7 @@
     box-shadow: var(--card-box-shadow), 0 0 0 0.2rem var(--secondary-focus);
   }
 
-  @media (min-width: map-get($breakpoints, "sm")) {
+  @media (min-width: map-get(config.$breakpoints, "sm")) {
     right: calc(var(--spacing) + var(--scrollbar-width, 0px));
   }
 }

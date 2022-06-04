@@ -1,13 +1,18 @@
 // Config
 // --------------------
 
-// Enable <header>, <main>, <footer> inside <body> as a container
-$enable-semantic-container: true;
+@use "config" with (
+  
+  // Enable <header>, <main>, <footer> inside <body> as a container
+  $enable-semantic-container: true,
 
-// Enable .classes
-$enable-classes: false;
+  // Enable .classes
+  $enable-classes: false,
+
+);
+
 
 // Pico Lib
 // --------------------
 
-@import "pico";
+@use "pico";

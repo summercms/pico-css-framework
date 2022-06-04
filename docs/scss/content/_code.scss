@@ -1,3 +1,5 @@
+@use "../../../scss/config";
+
 /**
  * Docs: Code
  */
@@ -40,7 +42,7 @@ section > pre {
     font-size: 14px;
     line-height: 1;
 
-    @media (min-width: map-get($breakpoints, "lg")) {
+    @media (min-width: map-get(config.$breakpoints, "lg")) {
       top: var(--spacing);
       right: var(--spacing);
     }

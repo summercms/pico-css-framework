@@ -1,0 +1,17 @@
+$pico-versionning: "Pico.css v1.5.2 (https://picocss.com)";
+$pico-license: "Copyright 2019-2022 - Licensed under MIT";
+$comment: false !default;
+
+@if ($comment) {
+/*!
+ * #{$pico-versionning}
+ * #{$pico-license}
+ * #{$comment}
+ */
+}
+@else {
+/*!
+ * #{$pico-versionning}
+ * #{$pico-license}
+ */
+}

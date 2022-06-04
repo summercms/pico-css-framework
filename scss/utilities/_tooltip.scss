@@ -1,3 +1,5 @@
+@use "../config";
+
 /**
  * Tooltip ([data-tooltip])
  */
@@ -58,7 +60,7 @@
   }
 
   // Animations, excluding touch devices
-  @if $enable-transitions {
+  @if config.$enable-transitions {
     @media (hover: hover) and (pointer: fine) {
       &:focus,
       &:hover {
@@ -77,7 +79,7 @@
 }
 
 // Animations
-@if $enable-transitions {
+@if config.$enable-transitions {
   @keyframes slide {
     from {
       transform: translate(-50%, .75rem);

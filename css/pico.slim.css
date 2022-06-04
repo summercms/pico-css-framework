@@ -1,9 +1,7 @@
 /*!
  * Pico.css v1.5.2 (https://picocss.com)
  * Copyright 2019-2022 - Licensed under MIT
- *
  * Slim version example
- * You can export only the modules you need
  */
 /**
  * Theme: default
@@ -509,8 +507,8 @@ body > footer {
 }
 
 /**
-* Container
-*/
+ * Container
+ */
 .container,
 .container-fluid {
   width: 100%;
@@ -552,9 +550,9 @@ section {
 }
 
 /**
-* Grid
-* Minimal grid system with auto-layout columns
-*/
+ * Grid
+ * Minimal grid system with auto-layout columns
+ */
 .grid {
   grid-column-gap: var(--grid-spacing-horizontal);
   grid-row-gap: var(--grid-spacing-vertical);

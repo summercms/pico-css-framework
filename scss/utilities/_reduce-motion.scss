@@ -1,4 +1,6 @@
-@if $enable-transitions and $enable-important {
+@use "../config";
+
+@if config.$enable-transitions and config.$enable-important {
   /**
  * Reduce Motion Features
  */

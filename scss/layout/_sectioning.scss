@@ -1,3 +1,5 @@
+@use "../config";
+
 /**
  * Sectioning
  * Container and responsive spacings for header, main, footer
@@ -29,34 +31,34 @@ body {
     margin-left: auto;
 
     // Semantic container
-    @if $enable-semantic-container {
+    @if config.$enable-semantic-container {
       padding: var(--block-spacing-vertical) var(--block-spacing-horizontal);
 
       // Centered viewport
-      @if $enable-viewport {
-        @if map-get($breakpoints, "sm") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "sm")) {
-            max-width: map-get($viewports, "sm");
+      @if config.$enable-viewport {
+        @if map-get(config.$breakpoints, "sm") and config.$enable-viewport {
+          @media (min-width: map-get(config.$breakpoints, "sm")) {
+            max-width: map-get(config.$viewports, "sm");
             padding-right: 0;
             padding-left: 0;
           }
         }
 
-        @if map-get($breakpoints, "md") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "md")) {
-            max-width: map-get($viewports, "md");
+        @if map-get(config.$breakpoints, "md") and config.$enable-viewport {
+          @media (min-width: map-get(config.$breakpoints, "md")) {
+            max-width: map-get(config.$viewports, "md");
           }
         }
 
-        @if map-get($breakpoints, "lg") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "lg")) {
-            max-width: map-get($viewports, "lg");
+        @if map-get(config.$breakpoints, "lg") and config.$enable-viewport {
+          @media (min-width: map-get(config.$breakpoints, "lg")) {
+            max-width: map-get(config.$viewports, "lg");
           }
         }
 
-        @if map-get($breakpoints, "xl") and $enable-viewport {
-          @media (min-width: map-get($breakpoints, "xl")) {
-            max-width: map-get($viewports, "xl");
+        @if map-get(config.$breakpoints, "xl") and config.$enable-viewport {
+          @media (min-width: map-get(config.$breakpoints, "xl")) {
+            max-width: map-get(config.$viewports, "xl");
           }
         }
       }

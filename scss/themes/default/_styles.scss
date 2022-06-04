@@ -1,3 +1,9 @@
+@use "../../config";
+
+/**
+ * Theme: default
+ */
+
 // Commons Styles
 :root {
   // Typography
@@ -9,27 +15,27 @@
   --font-size: 16px;
 
   // Responsive typography
-  @if $enable-responsive-typography {
-    @if map-get($breakpoints, "sm") {
-      @media (min-width: map-get($breakpoints, "sm")) {
+  @if config.$enable-responsive-typography {
+    @if map-get(config.$breakpoints, "sm") {
+      @media (min-width: map-get(config.$breakpoints, "sm")) {
         --font-size: 17px;
       }
     }
 
-    @if map-get($breakpoints, "md") {
-      @media (min-width: map-get($breakpoints, "md")) {
+    @if map-get(config.$breakpoints, "md") {
+      @media (min-width: map-get(config.$breakpoints, "md")) {
         --font-size: 18px;
       }
     }
 
-    @if map-get($breakpoints, "lg") {
-      @media (min-width: map-get($breakpoints, "lg")) {
+    @if map-get(config.$breakpoints, "lg") {
+      @media (min-width: map-get(config.$breakpoints, "lg")) {
         --font-size: 19px;
       }
     }
 
-    @if map-get($breakpoints, "xl") {
-      @media (min-width: map-get($breakpoints, "xl")) {
+    @if map-get(config.$breakpoints, "xl") {
+      @media (min-width: map-get(config.$breakpoints, "xl")) {
         --font-size: 20px;
       }
     }
@@ -50,7 +56,7 @@
   --block-spacing-vertical: calc(var(--spacing) * 2);
   --block-spacing-horizontal: var(--spacing);
 
-  @if ($enable-classes and $enable-grid) {
+  @if (config.$enable-classes and config.$enable-grid) {
     --grid-spacing-vertical: 0;
     --grid-spacing-horizontal: var(--spacing);
   }
@@ -73,32 +79,32 @@
 }
 
 // Responsives spacings
-@if $enable-responsive-spacings {
+@if config.$enable-responsive-spacings {
   // Sectionning
   body > header,
   body > main,
   body > footer,
   section {
-    @if map-get($breakpoints, "sm") {
-      @media (min-width: map-get($breakpoints, "sm")) {
+    @if map-get(config.$breakpoints, "sm") {
+      @media (min-width: map-get(config.$breakpoints, "sm")) {
         --block-spacing-vertical: calc(var(--spacing) * 2.5);
       }
     }
 
-    @if map-get($breakpoints, "md") {
-      @media (min-width: map-get($breakpoints, "md")) {
+    @if map-get(config.$breakpoints, "md") {
+      @media (min-width: map-get(config.$breakpoints, "md")) {
         --block-spacing-vertical: calc(var(--spacing) * 3);
       }
     }
 
-    @if map-get($breakpoints, "lg") {
-      @media (min-width: map-get($breakpoints, "lg")) {
+    @if map-get(config.$breakpoints, "lg") {
+      @media (min-width: map-get(config.$breakpoints, "lg")) {
         --block-spacing-vertical: calc(var(--spacing) * 3.5);
       }
     }
 
-    @if map-get($breakpoints, "xl") {
-      @media (min-width: map-get($breakpoints, "xl")) {
+    @if map-get(config.$breakpoints, "xl") {
+      @media (min-width: map-get(config.$breakpoints, "xl")) {
         --block-spacing-vertical: calc(var(--spacing) * 4);
       }
     }
@@ -106,26 +112,26 @@
 
   // Card (<article>)
   article {
-    @if map-get($breakpoints, "sm") {
-      @media (min-width: map-get($breakpoints, "sm")) {
+    @if map-get(config.$breakpoints, "sm") {
+      @media (min-width: map-get(config.$breakpoints, "sm")) {
         --block-spacing-horizontal: calc(var(--spacing) * 1.25);
       }
     }
 
-    @if map-get($breakpoints, "md") {
-      @media (min-width: map-get($breakpoints, "md")) {
+    @if map-get(config.$breakpoints, "md") {
+      @media (min-width: map-get(config.$breakpoints, "md")) {
         --block-spacing-horizontal: calc(var(--spacing) * 1.5);
       }
     }
 
-    @if map-get($breakpoints, "lg") {
-      @media (min-width: map-get($breakpoints, "lg")) {
+    @if map-get(config.$breakpoints, "lg") {
+      @media (min-width: map-get(config.$breakpoints, "lg")) {
         --block-spacing-horizontal: calc(var(--spacing) * 1.75);
       }
     }
 
-    @if map-get($breakpoints, "xl") {
-      @media (min-width: map-get($breakpoints, "xl")) {
+    @if map-get(config.$breakpoints, "xl") {
+      @media (min-width: map-get(config.$breakpoints, "xl")) {
         --block-spacing-horizontal: calc(var(--spacing) * 2);
       }
     }
@@ -137,15 +143,15 @@
     --block-spacing-vertical: calc(var(--spacing) * 2);
     --block-spacing-horizontal: var(--spacing);
 
-    @if map-get($breakpoints, "sm") {
-      @media (min-width: map-get($breakpoints, "sm")) {
+    @if map-get(config.$breakpoints, "sm") {
+      @media (min-width: map-get(config.$breakpoints, "sm")) {
         --block-spacing-vertical: calc(var(--spacing) * 2.5);
         --block-spacing-horizontal: calc(var(--spacing) * 1.25);
       }
     }
 
-    @if map-get($breakpoints, "md") {
-      @media (min-width: map-get($breakpoints, "md")) {
+    @if map-get(config.$breakpoints, "md") {
+      @media (min-width: map-get(config.$breakpoints, "md")) {
         --block-spacing-vertical: calc(var(--spacing) * 3);
         --block-spacing-horizontal: calc(var(--spacing) * 1.5);
       }
@@ -158,7 +164,7 @@ a {
   --text-decoration: none;
 
   // Secondary & Contrast
-  @if $enable-classes {
+  @if config.$enable-classes {
     &.secondary,
     &.contrast {
       --text-decoration: underline;

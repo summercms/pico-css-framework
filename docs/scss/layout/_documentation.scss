@@ -1,3 +1,5 @@
+@use "../../../scss/config";
+
 /**
  * Docs: Documentation
  */
@@ -24,7 +26,7 @@
     margin-bottom: 0;
     overflow: hidden;
 
-    @media (min-width: map-get($breakpoints, "sm")) {
+    @media (min-width: map-get(config.$breakpoints, "sm")) {
       grid-template-rows: 1fr;
       grid-template-columns: repeat(18, 1fr);
       border-top-right-radius: var(--border-radius);
@@ -83,7 +85,7 @@
     width: 100%;
     margin-bottom: var(--spacing);
 
-    @media (min-width: map-get($breakpoints, "sm")) {
+    @media (min-width: map-get(config.$breakpoints, "sm")) {
       display: inline-block;
       width: auto;
       margin-right: 0.5rem;

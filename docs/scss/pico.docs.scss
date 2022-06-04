@@ -1,24 +1,25 @@
-/*!
- * Pico: Customs styles for Docs
- */
+// Copyright
+@use "../../scss/copyright" with (
+  $comment: "Customs styles for Docs",
+);
 
 // Config
-@import "../../scss/variables";
+@use "../../scss/config";
 
 // Theming
-@import "themes/docs";
+@use "themes/docs";
 
 // Layout
-@import "layout/document";
-@import "layout/main";
-@import "layout/aside";
-@import "layout/documentation";
+@use "layout/document";
+@use "layout/main";
+@use "layout/aside";
+@use "layout/documentation";
 
 // Content
-@import "content/typography";
-@import "content/code";
+@use "content/typography";
+@use "content/code";
 
 // Components
-@import "components/modal";
-@import "components/nav";
-@import "components/theme-switcher";
+@use "components/modal";
+@use "components/nav";
+@use "components/theme-switcher";
